@@ -37,8 +37,6 @@ const slides = document.querySelectorAll('.features__info');
 total.textContent = `/ 0${slides.length}`;
 
 function showSlides(n) {
-  let i;
-
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -47,10 +45,10 @@ function showSlides(n) {
     slideIndex = slides.length;
   }
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = 'none';
-    slides[i].classList.remove('fade');
-  }
+  slides.forEach(slide => {
+    slide.style.display = 'none';
+    slide.classList.remove('fade');
+  });
 
   slides[slideIndex - 1].style.display = 'block';
   slides[slideIndex - 1].classList.add('fade');
@@ -62,14 +60,14 @@ window.addEventListener('resize', () => {
   const x = window.matchMedia('(min-width: 1280px)');
 
   if (x.matches) {
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'block';
-    }
+    slides.forEach(slide => {
+      slide.style.display = 'block';
+    });
   } else {
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-      slides[slideIndex - 1].style.display = 'block';
-    }
+    slides.forEach(slide => {
+      slide.style.display = 'none';
+    });
+    slides[slideIndex - 1].style.display = 'block';
   }
 });
 
