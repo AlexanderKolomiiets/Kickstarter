@@ -1,6 +1,6 @@
 # Kickstarter
 
-- [DEMO LINK](https://alexanderkolomiiets.github.io/Kickstarter/)
+- [PREVIEW LINK](https://alexanderkolomiiets.github.io/Kickstarter/)
 - [DESIGN](https://www.figma.com/file/Ujp7bCFuvuJlkn8TSbQPSZ/Kickstarter_FE-students)
 
 Site is developed for:
